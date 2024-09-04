@@ -1,3 +1,111 @@
+/* General Body Settings */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+header p {
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: center;
+    background: #444;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    padding: 15px 20px;
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Section */
+section {
+    padding: 20px;
+    margin-top: 20px;
+    background: white;
+    border-bottom: 2px solid #eee;
+}
+
+section h2 {
+    color: #333;
+}
+
+.container {
+    width: 80%;
+    margin: auto; /* Center the DIV horizontally */
+    overflow: hidden; /* Clearfix */
+}
+
+/* Experience and Project Items */
+.experience-item, .project-item {
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: white;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 0;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        display: block;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+}
 #about-me {
     background-color: #6a5acd; /* Light slate blue background */
     color: #ffffff; /* White text for better readability */
