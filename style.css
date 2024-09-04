@@ -106,3 +106,37 @@ footer {
         font-size: 1.5em;
     }
 }
+#about-me {
+    background-color: #6a5acd; /* Light slate blue background */
+    color: white;
+    padding: 20px;
+    cursor: pointer;
+}
+
+#about-me .brief-summary h2 {
+    text-align: center;
+    font-size: 24px;
+}
+
+#about-me .detailed-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('assets/img/hero/coverpage.JPG') no-repeat center center; /* Background from the image */
+    background-size: cover;
+    padding: 20px;
+}
+
+#about-me .detailed-summary img {
+    width: 250px; /* Adjust size as needed */
+    margin-right: 20px;
+}
+
+#about-me .detailed-summary .text-content {
+    max-width: 600px;
+}
+
+#about-me .detailed-summary p {
+    text-align: justify;
+    font-size: 18px;
+}
