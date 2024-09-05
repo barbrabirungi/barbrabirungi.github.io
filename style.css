@@ -149,9 +149,9 @@ footer {
 
 /* Video styling for bird animation */
 .brief-summary .bird-video {
-    width: 250px; /* Size of the video, make sure width and height are the same */
-    height: 180px; /* Same as width to maintain aspect ratio */
-    border-radius: 90%; /* Make the video circular */
+    width: 150px; /* Size of the video, make sure width and height are the same */
+    height: 80px; /* Same as width to maintain aspect ratio */
+    border-radius: 80%; /* Make the video circular */
     display: block; /* Ensures the video is block level to apply margin and centering */
     margin: 0 auto 10px; /* Center the video horizontally and add margin at the bottom */
     overflow: hidden; /* Ensures no overflow outside the circular boundary */
