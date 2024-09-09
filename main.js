@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Smooth scrolling using event delegation
     const nav = document.querySelector('nav');
     nav.addEventListener('click', function(e) {
         const target = e.target;
@@ -17,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // Back to top button functionality
     const backToTopButton = document.getElementById('back-top');
     if (backToTopButton) {
         window.onscroll = function() {
@@ -36,17 +34,14 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // General toggle detail view function for any section
-    function toggleDetail(sectionId) {
-        const section = document.querySelector(`#${sectionId} .detailed-summary`);
-        if (section) {
-            section.style.display = section.style.display === 'flex' ? 'none' : 'flex';
-        }
-    }
-
     // Attach toggle functionality to clickable sections
     const toggleSections = document.querySelectorAll('[data-toggle="toggle"]');
     toggleSections.forEach(section => {
-        section.addEventListener('click', () => toggleDetail(section.dataset.section));
+        section.addEventListener('click', () => {
+            const detailSection = document.querySelector(`#${section.dataset.section} .detailed-summary`);
+            if (detailSection) {
+                detailSection.style.display = detailSection.style.display === 'flex' ? 'none' : 'flex';
+            }
+        });
     });
 });
