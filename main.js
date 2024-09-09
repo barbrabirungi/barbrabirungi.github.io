@@ -1,8 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scrolling for navigation links
     const nav = document.querySelector('nav');
     nav.addEventListener('click', function(e) {
-        const target = e.target;
-        if (target.tagName === 'A') {
+        const target = e.target.closest('a'); // Ensures that the click on the <li> is recognized if it occurs on the <a>
+        if (target && target.tagName === 'A') {
             e.preventDefault();
             const href = target.getAttribute('href');
             const section = document.querySelector(href);
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
+    // Back to top button functionality
     const backToTopButton = document.getElementById('back-top');
     if (backToTopButton) {
         window.onscroll = function() {
@@ -34,13 +36,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Attach toggle functionality to clickable sections
-    const toggleSections = document.querySelectorAll('[data-toggle="toggle"]');
-    toggleSections.forEach(section => {
-        section.addEventListener('click', () => {
-            const detailSection = document.querySelector(`#${section.dataset.section} .detailed-summary`);
-            if (detailSection) {
-                detailSection.style.display = detailSection.style.display === 'flex' ? 'none' : 'flex';
+    // Toggle detailed view for sections
+    document.querySelectorAll('section').forEach(section => {
+        section.querySelector('.brief-summary').addEventListener('click', function() {
+            const detailed = section.querySelector('.detailed-summary');
+            if (detailed) {
+                detailed.style.display = detailed.style.display === 'flex' ? 'none' : 'flex';
             }
         });
     });

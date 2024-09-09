@@ -18,17 +18,17 @@
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#about-me" onclick="toggleDetail('about-me')">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#education" onclick="toggleDetail('education')">Education</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about-me" data-toggle="toggle" data-section="about-me">About</a></li>
+            <li><a href="#experience" data-toggle="toggle" data-section="experience">Experience</a></li>
+            <li><a href="#projects" data-toggle="toggle" data-section="projects">Projects</a></li>
+            <li><a href="#education" data-toggle="toggle" data-section="education">Education</a></li>
+            <li><a href="#contact" data-toggle="toggle" data-section="contact">Contact</a></li>
         </ul>
     </nav>
 
     <!-- About Me Section -->
     <section id="about-me">
-        <div class="brief-summary" onclick="toggleDetail('about-me')">
+        <div class="brief-summary">
             <h2>A Bit About Me</h2>
             <video class="bird-video" autoplay loop muted>
                 <source src="bird.mp4" type="video/mp4">
@@ -45,7 +45,7 @@
 
     <!-- Education Section -->
     <section id="education">
-        <div class="brief-summary" onclick="toggleDetail('education')">
+        <div class="brief-summary">
             <h2>Education</h2>
         </div>
         <div class="detailed-summary" style="display:none;">
@@ -58,34 +58,7 @@
                     <h4>Second Class Upper Honors</h4>
                 </div>
             </div>
-            <div class="education-entry">
-                <img src="graduation_cap.png" alt="Graduation Cap Image" class="education-img">
-                <div class="text-content">
-                    <h3>Afrofem Coders</h3>
-                    <h4>Certificate in Data Science</h4>
-                    <h4>Certificate in Data Analytics</h4>
-                    <h4>Certificate in Python Programming</h4>
-                    <h4>Certificate in Web Development</h4>
-                </div>
-            </div>
-            <div class="education-entry">
-                <img src="graduation_cap.png" alt="Graduation Cap Image" class="education-img">
-                <div class="text-content">
-                    <h3>Immaculate Heart Girls School</h3>
-                    <h4>Advanced Level Certificate of Education</h4>
-                    <h4>2015-2016</h4>
-                    <h4>Physics, Chemistry, Mathematics, ICT</h4>
-                </div>
-            </div>
-            <div class="education-entry">
-                <img src="graduation_cap.png" alt="Graduation Cap Image" class="education-img">
-                <div class="text-content">
-                    <h3>Maryhill High School</h3>
-                    <h4>Ordinary Level Certificate of Education</h4>
-                    <h4>2011-2014</h4>
-                    <h4>Division 1</h4>
-                </div>
-            </div>
+            <!-- Other education entries can be duplicated following the same format -->
         </div>
     </section>
 
