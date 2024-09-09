@@ -120,7 +120,7 @@ footer {
     color: #231c51;
 }
 
-#about-me .detailed-summary, #education .education-summary {
+#about-me .detailed-summary, #education .detailed-summary {
     display: none; 
     align-items: center;
     justify-content: center;
@@ -129,13 +129,13 @@ footer {
     padding: 20px;
 }
 
-#about-me .detailed-summary img, #education .education-summary img {
+#about-me .detailed-summary img, #education .detailed-summary img {
     width: 250px;
     margin-right: 20px;
     border-radius: 10px;
 }
 
-#about-me .detailed-summary .text-content, #education .education-summary .text-content {
+#about-me .detailed-summary .text-content, #education .detailed-summary .text-content {
     max-width: 600px;
     color: #fff;
     display: flex;
