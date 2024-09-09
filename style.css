@@ -167,8 +167,8 @@ footer {
 
 /* Video styling for bird animation */
 .brief-summary .bird-video {
-    width: 50px; /* Set width */
-    height: 50px; /* Set height to the same as width to make it a circle */
+    width: 100px; /* Set width */
+    height: 100px; /* Set height to the same as width to make it a circle */
     border-radius: 50%; /* Adjust to 50% for a perfect circle */
     display: block;
     margin: 0 auto 10px; /* Center the video horizontally */
@@ -179,8 +179,8 @@ footer {
 
 /* Video styling for gradcap animation */
 .education-summary .gradcap-video {
-    width: 50px; /* Set width */
-    height: 50px; /* Set height to the same as width to make it a circle */
+    width: 100px; /* Set width */
+    height: 100px; /* Set height to the same as width to make it a circle */
     border-radius: 50%; /* Adjust to 50% for a perfect circle */
     display: block;
     margin: 0 auto 10px; /* Center the video horizontally */
@@ -188,3 +188,4 @@ footer {
     object-fit: cover; /* Ensure the video covers the full area of the circle */
     object-position: center; /* Center the video within the circle */
 }
+
