@@ -178,7 +178,7 @@ footer {
 }
 
 /* Video styling for gradcap animation */
-.brief-summary .gradcap-video {
+.education-summary .gradcap-video {
     width: 150px; /* Set width */
     height: 150px; /* Set height to the same as width to make it a circle */
     border-radius: 50%; /* Adjust to 50% for a perfect circle */
