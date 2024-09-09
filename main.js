@@ -36,9 +36,18 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Toggle detailed view for sections
+    // Toggle detailed view for about sections
     document.querySelectorAll('section').forEach(section => {
         section.querySelector('.brief-summary').addEventListener('click', function() {
+            const detailed = section.querySelector('.detailed-summary');
+            if (detailed) {
+                detailed.style.display = detailed.style.display === 'flex' ? 'none' : 'flex';
+            }
+        });
+    });
+     // Toggle detailed view for education sections
+     document.querySelectorAll('section').forEach(section => {
+        section.querySelector('.education-summary').addEventListener('click', function() {
             const detailed = section.querySelector('.detailed-summary');
             if (detailed) {
                 detailed.style.display = detailed.style.display === 'flex' ? 'none' : 'flex';
