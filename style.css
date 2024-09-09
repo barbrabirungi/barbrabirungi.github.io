@@ -57,7 +57,7 @@ nav ul li a:hover {
 section {
     padding: 20px;
     margin-top: 20px;
-    background:  #89CFF0;
+    background: #89CFF0;
     border-bottom: 2px solid #eee;
 }
 
@@ -67,8 +67,8 @@ section h2 {
 
 .container {
     width: 80%;
-    margin: auto; /* Center the DIV horizontally */
-    overflow: hidden; /* Clearfix */
+    margin: auto;
+    overflow: hidden;
 }
 
 /* Experience and Project Items */
@@ -107,41 +107,59 @@ footer {
     }
 }
 
-#about-me {
-    background-color:  #89CFF0; /* Light slate blue background */
-    color:  #89CFF0; /*not sure where this applies but will look into it */
+#about-me, #education {
+    background-color: #89CFF0; 
     padding: 20px;
     cursor: pointer;
 }
 
-#about-me .brief-summary h2 {
+#about-me .brief-summary h2, #education .brief-summary h2 {
     text-align: center;
     font-size: 34px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #231c51;
 }
 
-#about-me .detailed-summary {
-    display: none; /* starts hidden */
+#about-me .detailed-summary, #education .detailed-summary {
+    display: none; 
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to right, #231c51, #342976), url('assets/img/hero/coverpage.JPG') no-repeat center center; /* Add a gradient to make text more readable */
+    background: linear-gradient(to right, #231c51, #342976);
     background-size: cover;
     padding: 20px;
 }
 
-#about-me .detailed-summary img {
-    width: 250px; /* Adjust size as needed */
+#about-me .detailed-summary img, #education .detailed-summary img {
+    width: 250px;
     margin-right: 20px;
-    border-radius: 10px; /* Optional: adds rounded corners to the image */
+    border-radius: 10px;
 }
 
-#about-me .detailed-summary .text-content {
+#about-me .detailed-summary .text-content, #education .detailed-summary .text-content {
     max-width: 600px;
-    color: #fff; /* White text for detailed content */
+    color: #fff;
+    display: flex;
+    flex-direction: row;
 }
 
-#about-me .detailed-summary p {
+#education .education-entry {
+    background: #a58bdf;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#education .education-entry .education-img {
+    width: 100px;
+    margin-right: 20px;
+}
+
+#education .education-entry .text-content {
+    flex-grow: 1;
+}
+
+#about-me .detailed-summary p, #education .detailed-summary p {
     text-align: justify;
     font-size: 18px;
     font-family: cursive;
@@ -149,10 +167,10 @@ footer {
 
 /* Video styling for bird animation */
 .brief-summary .bird-video {
-    width: 150px; /* Size of the video, make sure width and height are the same */
-    height: 80px; /* Same as width to maintain aspect ratio */
-    border-radius: 80%; /* Make the video circular */
-    display: block; /* Ensures the video is block level to apply margin and centering */
-    margin: 0 auto 10px; /* Center the video horizontally and add margin at the bottom */
-    overflow: hidden; /* Ensures no overflow outside the circular boundary */
+    width: 150px;
+    height: 80px;
+    border-radius: 80%;
+    display: block;
+    margin: 0 auto 10px;
+    overflow: hidden;
 }
