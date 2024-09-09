@@ -36,14 +36,17 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    // Toggle detailed view in About Me section
-    const aboutMeSummary = document.querySelector('.brief-summary');
-    if (aboutMeSummary) {
-        aboutMeSummary.addEventListener('click', function() {
-            const detailedSection = document.querySelector('.detailed-summary');
-            if (detailedSection) {
-                detailedSection.style.display = detailedSection.style.display === 'flex' ? 'none' : 'flex';
-            }
-        });
+    // General toggle detail view function for any section
+    function toggleDetail(sectionId) {
+        const section = document.querySelector(`#${sectionId} .detailed-summary`);
+        if (section) {
+            section.style.display = section.style.display === 'flex' ? 'none' : 'flex';
+        }
     }
+
+    // Attach toggle functionality to clickable sections
+    const toggleSections = document.querySelectorAll('[data-toggle="toggle"]');
+    toggleSections.forEach(section => {
+        section.addEventListener('click', () => toggleDetail(section.dataset.section));
+    });
 });
