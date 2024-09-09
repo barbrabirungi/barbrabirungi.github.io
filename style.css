@@ -167,10 +167,10 @@ footer {
 
 /* Video styling for bird animation */
 .brief-summary .bird-video {
-    width: 150px;
-    height: 80px;
-    border-radius: 80%;
+    width: 150px; /* Set width */
+    height: 150px; /* Set height to the same as width to make it a circle */
+    border-radius: 50%; /* Adjust to 50% for a perfect circle */
     display: block;
-    margin: 0 auto 10px;
-    overflow: hidden;
+    margin: 0 auto 10px; /* Center the video horizontally */
+    overflow: hidden; /* Hide anything outside the circle */
 }
