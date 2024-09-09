@@ -173,4 +173,6 @@ footer {
     display: block;
     margin: 0 auto 10px; /* Center the video horizontally */
     overflow: hidden; /* Hide anything outside the circle */
+    object-fit: cover; /* Ensure the video covers the full area of the circle */
+    object-position: center; /* Center the video within the circle */
 }
