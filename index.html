@@ -11,114 +11,53 @@
     <header>
         <div class="container">
             <h1>Barbra Birungi</h1>
-            <p>Data Analyst | GIS Specialist | Python Developer</p>
+            <p>Data Analyst | AI Training Specialist | Safe Technology Advocate</p>
         </div>
     </header>
 
     <!-- Navigation -->
     <nav>
         <ul>
-            <li><a href="#about-me" data-toggle="toggle" data-section="about-me">About</a></li>
-            <li><a href="#experience" data-toggle="toggle" data-section="experience">Experience</a></li>
-            <li><a href="#projects" data-toggle="toggle" data-section="projects">Projects</a></li>
-            <li><a href="#education" data-toggle="toggle" data-section="education">Education</a></li>
-            <li><a href="#contact" data-toggle="toggle" data-section="contact">Contact</a></li>
+            <li><a href="#about-me">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- About Me Section -->
-    <section id="about-me">
-        <div class="brief-summary">
-            <h2>A Bit About Me</h2>
-            <video class="bird-video" autoplay loop muted>
-                <source src="bird.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+    <!-- Sections -->
+    <section id="about-me" class="info-section">
+        <div class="brief-summary" onclick="toggleDetail('about-me')">A Bit About Me</div>
         <div class="detailed-summary" style="display:none;">
-            <img src="profile.png" alt="Profile Image">
-            <div class="text-content">
-                <p>I am a passionate data enthusiast who, despite the challenges of pivoting early in my career, has successfully transitioned into the world of technology. As they say, "It's a blessing when you find something you truly love with all your heart." For me, that was discovering the world of data. I come alive when working with data—deriving insights, cleaning it up, and transforming numbers into a beautiful story through visualizations. In my free time, I enjoy learning new languages and reading books when I’m not immersed in data.</p>
-            </div>
+            <p>I am a passionate data enthusiast who, despite the challenges of pivoting early in my career, has successfully transitioned into the world of technology...</p>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education">
-        <div class="education-summary">
-            <h2>Education</h2>
-            <video class="gradcap-video" autoplay loop muted>
-                <source src="gradcap.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
+    <section id="experience" class="info-section">
+        <div class="brief-summary" onclick="toggleDetail('experience')">Professional Experience</div>
         <div class="detailed-summary" style="display:none;">
-            <div class="education-entry">
-                <img src="graduation_cap.png" alt="Graduation Cap Image" class="education-img">
-                <div class="text-content">
-                    <h3>Makerere University</h3>
-                    <h4>Bachelor of Science in Geoscience and Production</h4>
-                    <h4>2017-2022</h4>
-                    <h4>Second Class Upper Honors</h4>
-                </div>
-            </div>
-            <div class="education-entry">
-                <img src="graduation_cap.png" alt="Graduation Cap Image" class="education-img">
-                <div class="text-content">
-                    <h3>Makerere University</h3>
-                    <h4>Bachelor of Science in Geoscience and Production</h4>
-                    <h4>2017-2022</h4>
-                    <h4>Second Class Upper Honors</h4>
-                </div>
-            </div>    
-            <div class="education-entry">
-                    <img src="graduation_cap.png" alt="Graduation Cap Image" class="education-img">
-                    <div class="text-content">
-                        <h3>Makerere University</h3>
-                        <h4>Bachelor of Science in Geoscience and Production</h4>
-                        <h4>2017-2022</h4>
-                        <h4>Second Class Upper Honors</h4>
-                    </div>
-            </div>        
-            </div>
-            <!-- Other education entries can be duplicated following the same format -->
+            <p>As a Data and Insights Quality Control Officer at Enveritas, Inc, I led field teams across eight countries, enhancing data accuracy and operational efficiency...</p>
         </div>
     </section>
 
-    <!-- Experience Section -->
-    <section id="experience">
-        <div class="container">
-            <h2>Professional Experience</h2>
-            <div class="experience-item">
-                <h3>Data and Insights Quality Control Officer - Enveritas, Inc</h3>
-                <p>Managed field teams across eight countries, enhancing data accuracy and operational efficiency critical for informed decision-making in sustainable agriculture.</p>
-            </div>
-            <div class="experience-item">
-                <h3>Advanced AI Trainer - Invisible Technologies</h3>
-                <p>Developed training programs for AI models, enhancing the accuracy and performance of AI applications in real-world scenarios.</p>
-            </div>
+    <section id="projects" class="info-section">
+        <div class="brief-summary" onclick="toggleDetail('projects')">Featured Projects</div>
+        <div class="detailed-summary" style="display:none;">
+            <p>Projects include Wikipedia 2016 Page Visit Analysis and New York City 2019 Airbnb Analysis...</p>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="container">
-            <h2>Featured Projects</h2>
-            <div class="project-item">
-                <h3>Wikipedia 2016 Page Visit Analysis</h3>
-                <p>Analysis of traffic data to understand visitor trends and behaviors, using Python and Tableau for data manipulation and visualization.</p>
-            </div>
-            <div class="project-item">
-                <h3>New York City 2019 Airbnb Analysis</h3>
-                <p>Insights into Airbnb's market in NYC to aid potential hosts and real estate investors in making informed decisions.</p>
-            </div>
+    <section id="education" class="info-section">
+        <div class="brief-summary" onclick="toggleDetail('education')">Education</div>
+        <div class="detailed-summary" style="display:none;">
+            <p>Graduated from Makerere University with a Bachelor of Science in Petroleum Geoscience and Production...</p>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Me</h2>
+    <section id="contact" class="info-section">
+        <div class="brief-summary" onclick="toggleDetail('contact')">Contact</div>
+        <div class="detailed-summary" style="display:none;">
             <p>Email: rungibarbra@gmail.com</p>
         </div>
     </section>

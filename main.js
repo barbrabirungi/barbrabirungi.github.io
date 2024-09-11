@@ -1,57 +1,26 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Smooth scrolling for navigation links
-    const nav = document.querySelector('nav');
-    nav.addEventListener('click', function(e) {
-        const target = e.target.closest('a'); // Ensures that the click on the <li> is recognized if it occurs on the <a>
-        if (target && target.tagName === 'A') {
+    document.querySelectorAll('.brief-summary').forEach(summary => {
+        summary.addEventListener('click', function() {
+            const detail = this.nextElementSibling;
+            detail.style.display = detail.style.display === 'flex' ? 'none' : 'flex';
+        });
+    });
+
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
             e.preventDefault();
-            const href = target.getAttribute('href');
-            const section = document.querySelector(href);
-            if (section) {
-                const offsetTop = section.offsetTop;
-                window.scroll({
-                    top: offsetTop,
-                    behavior: "smooth"
-                });
-            }
-        }
+            const section = document.querySelector(this.getAttribute('href') + ' .detailed-summary');
+            section.style.display = section.style.display === 'flex' ? 'none' : 'flex';
+        });
     });
 
-    // Back to top button functionality
     const backToTopButton = document.getElementById('back-top');
-    if (backToTopButton) {
-        window.onscroll = function() {
-            if (window.pageYOffset > 20) {
-                backToTopButton.style.display = "block";
-            } else {
-                backToTopButton.style.display = "none";
-            }
-        };
+    window.onscroll = function() {
+        backToTopButton.style.display = window.pageYOffset > 20 ? 'block' : 'none';
+    };
 
-        backToTopButton.addEventListener('click', function() {
-            window.scroll({
-                top: 0,
-                behavior: 'smooth'
-            });
-        });
-    }
-
-    // Toggle detailed view for about sections
-    document.querySelectorAll('section').forEach(section => {
-        section.querySelector('.brief-summary').addEventListener('click', function() {
-            const detailed = section.querySelector('.detailed-summary');
-            if (detailed) {
-                detailed.style.display = detailed.style.display === 'flex' ? 'none' : 'flex';
-            }
-        });
-    });
-     // Toggle detailed view for education sections
-     document.querySelectorAll('section').forEach(section => {
-        section.querySelector('.education-summary').addEventListener('click', function() {
-            const detailed = section.querySelector('.detailed-summary');
-            if (detailed) {
-                detailed.style.display = detailed.style.display === 'flex' ? 'none' : 'flex';
-            }
-        });
+    backToTopButton.addEventListener('click', function() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 });

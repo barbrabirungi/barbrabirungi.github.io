@@ -1,14 +1,12 @@
-/* General Body Settings */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     color: #231c51;
-    line-height: 1.6;
     background-color: #f4f4f4;
+    line-height: 1.6;
 }
 
-/* Header */
 header {
     background: #231c51;
     color: #fff;
@@ -16,17 +14,6 @@ header {
     text-align: center;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-header p {
-    margin: 0;
-    font-weight: 300;
-}
-
-/* Navigation */
 nav {
     display: flex;
     justify-content: center;
@@ -53,32 +40,30 @@ nav ul li a:hover {
     background-color: #231c51;
 }
 
-/* Section */
-section {
+section.info-section {
     padding: 20px;
     margin-top: 20px;
     background: #89CFF0;
     border-bottom: 2px solid #eee;
 }
 
-section h2 {
+section.info-section .brief-summary {
+    text-align: center;
+    font-size: 34px;
+    cursor: pointer;
     color: #231c51;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
+section.info-section .detailed-summary {
+    display: none;
+    background: linear-gradient(to right, #231c51, #342976);
+    padding: 20px;
+    color: #fff;
+    text-align: justify;
+    font-size: 18px;
 }
 
-/* Experience and Project Items */
-.experience-item, .project-item {
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #eee;
-}
-
-/* Footer */
 footer {
     text-align: center;
     padding: 20px 0;
@@ -86,13 +71,7 @@ footer {
     color: white;
 }
 
-/* Media Queries */
 @media only screen and (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 0;
-    }
-
     nav {
         flex-direction: column;
     }
@@ -106,86 +85,3 @@ footer {
         font-size: 1.5em;
     }
 }
-
-#about-me, #education {
-    background-color: #89CFF0; 
-    padding: 20px;
-    cursor: pointer;
-}
-
-#about-me .brief-summary h2, #education .education-summary h2 {
-    text-align: center;
-    font-size: 34px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #231c51;
-}
-
-#about-me .detailed-summary, #education .detailed-summary {
-    display: none; 
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, #231c51, #342976);
-    background-size: cover;
-    padding: 20px;
-}
-
-#about-me .detailed-summary img, #education .detailed-summary img {
-    width: 250px;
-    margin-right: 20px;
-    border-radius: 10px;
-}
-
-#about-me .detailed-summary .text-content, #education .detailed-summary .text-content {
-    max-width: 600px;
-    color: #fff;
-    display: flex;
-    flex-direction: row;
-}
-
-#education .education-entry {
-    background: #342976;
-    padding: 15px;
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-}
-
-#education .education-entry .education-img {
-    width: 100px;
-    margin-right: 20px;
-}
-
-#education .education-entry .text-content {
-    flex-grow: 1;
-}
-
-#about-me .detailed-summary p, #education .detailed-summary p {
-    text-align: justify;
-    font-size: 18px;
-    font-family: cursive;
-}
-
-/* Video styling for bird animation */
-.brief-summary .bird-video {
-    width: 100px; /* Set width */
-    height: 100px; /* Set height to the same as width to make it a circle */
-    border-radius: 50%; /* Adjust to 50% for a perfect circle */
-    display: block;
-    margin: 0 auto 10px; /* Center the video horizontally */
-    overflow: hidden; /* Hide anything outside the circle */
-    object-fit: cover; /* Ensure the video covers the full area of the circle */
-    object-position: center; /* Center the video within the circle */
-}
-
-/* Video styling for gradcap animation */
-.education-summary .gradcap-video {
-    width: 100px; /* Set width */
-    height: 100px; /* Set height to the same as width to make it a circle */
-    border-radius: 50%; /* Adjust to 50% for a perfect circle */
-    display: block;
-    margin: 0 auto 10px; /* Center the video horizontally */
-    overflow: hidden; /* Hide anything outside the circle */
-    object-fit: cover; /* Ensure the video covers the full area of the circle */
-    object-position: center; /* Center the video within the circle */
-}
-
